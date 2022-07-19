@@ -1,0 +1,17 @@
+<div class="card text-center">
+    <div class="card-body">
+        <img style="width:100px; height:100px" class="card-img-top" src="{{product.image}}" alt="Card image cap">
+  
+        <a [routerLink]="['/product-details' , product.id]">
+            <h5 class="card-title">{{product.title}}</h5>
+        </a>
+        <p class="card-text text-center">category: {{product.category}}</p>
+        <p class="card-text text-center">Price:  {{product.price}}EGY</p>
+        <p class="card-text text-center" [style.color]="product.rating.count>0?'green':'red'" >{{product.rating.count|count}}</p>
+        <button class="btn btn-primary" (click)="goToDetails(product.id)">
+            Go to product details</button>
+    </div>
+  </div>
+  
+  
+  <!-- (click)="emitProductName()" -->'
